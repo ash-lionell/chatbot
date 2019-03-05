@@ -1,0 +1,23 @@
+[{
+    "type": "create-pnr:acknowledge",
+    "message": {
+        "text": "<ORIGINAL_MSG_TEXT>",
+        "attachments": [
+            {
+                "text": "Your chosen profile >> *<PNR_PROFILE>*",
+                "fallback": "Your chosen PNR profile:",
+                "callback_id": "callback",
+                "color": "#3AA3E3",
+                "attachment_type": "default",
+                "actions": [
+                    {
+                      "name": "Change PNR Profile",
+                      "text": "Change PNR Profile",
+                      "type": "button",
+                      "value": "change-pnr-profile"
+                    }
+                ]
+            }
+        ]
+    }
+}]

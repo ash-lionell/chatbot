@@ -1,0 +1,142 @@
+[{
+	"type":"create-pnr:domestic-single:defaults",
+	"message":{
+		"text":"Defaults for profile:",
+		"blocks":[
+			{
+				"type": "section",
+				"text": {
+					"text": "Defaults for `<PNR_PROFILE>` PNR",
+					"type": "mrkdwn"
+				},
+				"fields": [
+					{
+						"type": "mrkdwn",
+						"text": "*Flight #*"
+					},
+					{
+						"type": "mrkdwn",
+						"text": "*Segments (1)*"
+					},
+					{
+						"type": "mrkdwn",
+						"text": "_Next Available_"
+					},
+					{
+						"type": "mrkdwn",
+						"text": "ATL - MSP"
+					},
+					{
+						"type": "mrkdwn",
+						"text": "*Trip Type*"
+					},
+					{
+						"type": "mrkdwn",
+						"text": "*Trip Date*"
+					},
+					{
+						"type": "mrkdwn",
+						"text": "One-Way"
+					},
+					{
+						"type": "mrkdwn",
+						"text": "3/5"
+					}
+				]
+			},
+			{
+				"type": "section",
+				"fields": [
+					{
+						"type": "mrkdwn",
+						"text": "*Passengers (1)*"
+					},
+					{
+						"type": "mrkdwn",
+						"text": " "
+					},
+					{
+						"type": "mrkdwn",
+						"text": "JOHN/DOE"
+					}
+				]
+			},
+			{
+				"type": "actions",
+				"block_id": "action",
+				"elements": [
+					{
+						"type": "button",
+						"text": {
+							"type": "plain_text",
+							"text": "Make It Roundtrip"
+						},
+						"action_id": "button"
+					},
+					{
+						"type": "button",
+						"text": {
+							"type": "plain_text",
+							"text": "Modify Segments"
+						},
+						"action_id": "button2"
+					},
+					{
+						"type": "button",
+						"text": {
+							"type": "plain_text",
+							"text": "Modify Date"
+						},
+						"action_id": "button3"
+					},
+					{
+						"type": "button",
+						"text": {
+							"type": "plain_text",
+							"text": "Choose Flight"
+						},
+						"action_id": "button4"
+					},
+					{
+						"type": "button",
+						"text": {
+							"type": "plain_text",
+							"text": "Modify Pax"
+						},
+						"action_id": "button5"
+					}
+				]
+			}
+		],
+		"attachments": [
+			{
+				"fallback": "Please choose an action:",
+				"callback_id": "callback",
+				"color": "#3AA3E3",
+				"attachment_type": "default",
+				"actions": [
+					{
+						"name": "Create With Defaults",
+						"text": "Create With Defaults",
+						"type": "button",
+						"value": "create-pnr:create:default",
+						"style": "primary"
+					},
+					{
+						"name": "Abort",
+						"text": "Abort",
+						"type": "button",
+						"value": "create-pnr:abort",
+						"style": "danger",
+						"confirm": {
+							"title": "Do you wish to abort?",
+							"text": "You will lose all progress made till now, if you abort.",
+							"ok_text": "Yes, Please Abort",
+							"dismiss_text": "No, Cancel It"
+						}
+					}
+				]
+			}
+		]
+	}
+}]
